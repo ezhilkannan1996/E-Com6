@@ -1,0 +1,91 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-image: url('https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80');
+  background-size: cover; */
+}
+
+.login-card {
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply backdrop filter for frosted glass effect */
+  border-radius: 10px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 28px;
+  color: #333;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+}
+
+.btnsubmit {
+  width: 100%;
+}
+
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust object-fit property */
+  z-index: -1;
+}
+
+
+.btnsubmit {
+  background-color: #e44d26;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 16px; /* Adjust font size as needed */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the text horizontally */
+}
+
+.btnsubmit:hover {
+  background-color: #c7320b;
+}
+
+.mat-input-element {
+  padding: 0; /* Remove padding */
+}
+
+.mat-input-element.login-input {
+  padding: 0; /* Remove padding */
+}
+

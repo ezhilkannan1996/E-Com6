@@ -1,0 +1,13 @@
+
+<mat-card class="user-popup" [ngStyle]="popupStyles" *ngIf="showPopup">
+    <mat-card-content class="user-profile">
+      <div class="profile-picture">
+        <img [src]="loggedInUser?.image" alt="Profile Picture" class="passport-size-picture">
+      </div>
+     <div class="user-details">
+        <p>{{ loggedInUser?.name }}</p>
+        <p class="email">{{ loggedInUser?.email }}</p>
+        <p class="phone">{{ loggedInUser?.phonenumber }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card> 

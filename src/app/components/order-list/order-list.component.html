@@ -1,0 +1,38 @@
+<div class="order-list-container">
+  <h1 class="header-text">Order List</h1>
+  <ng-container *ngIf="orderList.length > 0; else noOrders">
+    <mat-card class="order-card" *ngFor="let order of orderList">
+      <mat-card-header class="order-header">
+        <div mat-card-avatar class="order-avatar">
+          <mat-icon>shopping_cart</mat-icon>
+        </div>
+        <mat-card-title>Order ID: {{ order.id }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ul class="item-list">
+          <li *ngFor="let item of order.items" class="item">
+            <div class="item-details">
+              <img [src]="item.imageUrl" [alt]="item.name" class="item-image" />
+              <span class="item-name">{{ item.name }}</span>
+              <span class="quantity">Quantity: {{ item.quantity }}</span>
+            </div>
+            <div class="item-price">
+              Price: {{ item.price * item.quantity | currency: 'INR' }}
+            </div>
+          </li>
+        </ul>
+        <div class="grand-total">
+          Grand Total: {{ calculateGrandTotal(order) | currency: 'INR' }}
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="cancelOrder(order)" class="add-to-cart-btn">
+          <ng-container>Cancel Order</ng-container>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  <ng-template #noOrders>
+    <p class="no-orders-text">No orders available.</p>
+  </ng-template>
+</div>
